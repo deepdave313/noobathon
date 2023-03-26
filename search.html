@@ -197,6 +197,20 @@
         </div>
     </div>
 </div>
+<script>
+    function validateForm() {
+      let rno = document.forms["signIn"]["rno"].value;
+      let email = document.forms["signIn"]["email"].value;
+      let password = document.forms["signIn"]["password"].value;
+      if (rno == "" || email == "" || password == "") {
+        alert("Details must be correctly filled out!");
+        return false;
+      } else {
+        window.location.replace("./search.html");
+        return true;
+      }
+    }
+</script>
 <hr>
 </body>
 </html>

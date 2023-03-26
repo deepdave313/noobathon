@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,15 +9,27 @@
 <body>
   <div class="main">
     <p class="sign" align="center">Login</p>
-    <form class="form1">
-      <input class="rno" type="text" align="center" placeholder="Roll No.">
-      <input class="rno" type="text" align="center" placeholder="Student E-Mail ID">
-      <input class="pass" type="password" align="center" placeholder="Password">
-      <a class="submit" align="center" href ="./search.html">Sign in</a>
-            
-                
-    </div>
-     
+    <form class="form1" name="signIn">
+      <input class="rno" type="text" align="center" name="rno" placeholder="Student roll No.">
+      <input class="rno" type="text" align="center" name="email" placeholder="Student E-Mail ID">
+      <input class="pass" type="password" align="center" name="password" placeholder="Password">
+      <input type="button" value="Sign In" class="submit" onclick="validateForm()">
+    </form>
+  </div>
+  <script>
+    function validateForm() {
+      let rno = document.forms["signIn"]["rno"].value;
+      let email = document.forms["signIn"]["email"].value;
+      let password = document.forms["signIn"]["password"].value;
+      if (rno == "" || email == "" || password == "") {
+        alert("Details must be correctly filled out!");
+        return false;
+      } else {
+        window.location.replace("./search.html");
+        return true;
+      }
+    }
+  </script>
 </body>
 
 </html>
