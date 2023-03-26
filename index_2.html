@@ -19,7 +19,7 @@
         <input type="radio" name="rate" id="rate-4">
         <label for="rate-4" class="fas fa-star"></label>
         <input type="radio" name="rate" id="rate-3">
-        <label for="rate-3" class="fas fa-star"></label>   <!-- fas fa-star is star icon -->
+        <label for="rate-3" class="fas fa-star"></label>  
         <input type="radio" name="rate" id="rate-2">
         <label for="rate-2" class="fas fa-star"></label>
         <input type="radio" name="rate" id="rate-1">
@@ -30,11 +30,16 @@
             <textarea cols="30" placeholder="Comments (optional)"></textarea>
           </div>
           <div class="btn">
-            <button type="submit" style="border-radius: 5em;">Post</button>
+            <button type="button" style="border-radius: 5em;" onclick="redirect()">Post</button>
           </div>
         </form>
       </div>
     </div>
+    <script>
+      function redirect() {
+        window.location.replace("./thx.html");
+      }
+    </script>
   </body>
 </html>
 
