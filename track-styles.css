@@ -2,11 +2,9 @@ body {
     color: #000;
     height: 100%;
     background-color: #addafd;
-    background-repeat: no-repeat;
 }
 
 .card {
-    z-index: 0;
     background-color: #ffffff;
     padding-left: 80px;
     padding-bottom: 30px;
